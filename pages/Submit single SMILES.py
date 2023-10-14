@@ -6,7 +6,7 @@ import numpy as np
 from rdkit import Chem
 from mordred import Calculator, descriptors
 import pickle
-#from ..scripts.standardise_smiles_local_implementation import standardize_jumpcp
+from .scripts.standardise_smiles_local_implementation import standardize_jumpcp
 from rdkit.Chem import Draw
 
 def main():
@@ -17,10 +17,10 @@ def main():
     # Input SMILES
     smiles = st.text_input("Enter SMILES")
     
-    if st.button('Predict DILI'):
+    if st.button('Predict DICTrank'):
     
         # Load data_columns from the .pkl file
-        with open('../features/data_columns.pkl', 'rb') as file:
+        with open('./features/data_columns.pkl', 'rb') as file:
             data_columns = pickle.load(file)
         
         # Create a DataFrame with a single column "SMILES"
@@ -44,7 +44,7 @@ def main():
         X[np.isinf(X)] = 0
         
         # Load the classifier model
-        classifier = pickle.load(open("../model/FINAL_Physicochemical_model.sav", 'rb'))
+        classifier = pickle.load(open("./model/FINAL_Physicochemical_model.sav", 'rb'))
         
         # Predict DICTrank
         prob_test = classifier.predict_proba(X)[:, 1]
@@ -63,7 +63,7 @@ def main():
         # Create a Streamlit column for the molecule image
         col1, col2 = st.columns(2)
         
-        # Define function to check and display substructures
+        # Define a function to check and display substructures
         def check_and_display_substructure(sub_mol):
             if mol.HasSubstructMatch(sub_mol):
                 main_img = Draw.MolToImage(mol, size=molSize, highlightAtoms=mol.GetSubstructMatch(sub_mol), dpi=dpi)
