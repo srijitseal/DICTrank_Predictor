@@ -6,8 +6,6 @@ import os
 os.environ["PYTHONWARNINGS"] = "ignore"  # Suppress warnings
 
 import pandas as pd
-from pandarallel import pandarallel
-pandarallel.initialize(progress_bar=False)
 
 from dimorphite_dl.dimorphite_dl import DimorphiteDL
 from rdkit.Chem import AddHs
