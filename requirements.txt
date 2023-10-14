@@ -5,6 +5,7 @@ pandas
 matplotlib
 rdkit-pypi
 mordred
+dimorphite-dl
 joblib
 matplotlib
 scikit-learn==1.1.1
