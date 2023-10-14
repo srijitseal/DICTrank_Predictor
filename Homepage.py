@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="DILI Predictor",
+    page_title="DICTrank Predictor",
     page_icon="Logo.png",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -9,7 +9,7 @@ st.set_page_config(
 
 left_col, right_col = st.columns(2)
 
-right_col.write("# Welcome to DILI Predictor")
+right_col.write("# Welcome to DICTrank Predictor")
 right_col.write("v1.1.3")
 right_col.write("Srijit Seal*[1], Ola Spjuth[2], Layla Hosseini-Gerami[3], Miguel García-Ortegón[4], Shantanu Singh[1], Andreas Bender[4], Anne E. Carpenter[1]")
 right_col.write("[1] Imaging Platform, Broad Institute of MIT and Harvard, US; [2] Uppsala University; [3] Ignota Labs, UK; [4] Uppsala University, Sweden")                
