@@ -27,7 +27,7 @@ st.markdown(
     DICTrank Predictor employs physicochemical parameters as features.
     
     Select from the sidebar to predict DILI for a single molecule
-    For bulk jobs, or local use: see (https://broad.io/DICTrank_Predictor)
+    For bulk jobs, or local use: see [Documentation](https://broad.io/DICTrank_Predictor)
     
     ### Want to learn more?
     - Check out our paper at [bioarxiv](https://streamlit.io)
