@@ -21,17 +21,13 @@ st.sidebar.success("")
 
 st.markdown(
 """
-    DILI Predictor is an open-source app framework built specifically for
-    human drug-induced liver injury (DILI)  
+    DICT Predictor is an open-source app framework built specifically for
+    human drug-induced cardiotoxicity (DICT)  
 
-    DILI Predictor employs eleven proxy-DILI labels from in vitro 
-    (e.g., mitochondrial toxicity, bile salt export pump inhibition) 
-    and in vivo (e.g., preclinical rat hepatotoxicity studies) 
-    datasets along with structural fingerprints and physicochemical 
-    parameters as features.
+    DILI Predictor employs physicochemical parameters as features.
     
-    Select from the sidebar to predict DILI for a single molecule!
-    For bulk jobs, or local use: use code from Github page: https://github.com/srijitseal/DILI_Predictor
+    Select from the sidebar to predict DILI for a single molecule
+    For bulk jobs, or local use: see (https://broad.io/DICTrank_Predictor)
     
     ### Want to learn more?
     - Check out our paper at [bioarxiv](https://streamlit.io)
@@ -49,8 +45,7 @@ left_col.markdown(
         On the left pane is the main menu for navigating to 
         the following pages in the PK Predictor application:
         - **Home Page:** You are here!
-        - **Documentation:** Explains how the algorithm works and the overview of the models
-        - **Submit single SMILES:** You can enter the smiles of the query compound here to obtain a detailed analysis of the predicted DILI and also proxy-DILI labels used by the model.
+        - **Submit single SMILES:** You can enter the smiles of the query compound here to obtain a detailed analysis of the predicted DICTrank and detected structural alerts.
         """
     )
 st.markdown("---")
@@ -64,10 +59,8 @@ left_info_col.markdown(
         ### Authors
         
         ##### Srijit Seal 
-        - Email:  <ss2686@cam.ac.uk>
+        - Email:  <seal@broadinstitute.org>
         - GitHub: https://github.com/srijitseal
-        ##### Andreas Bender
-        - Email: <ab454@cam.ac.uk>
         """,
         unsafe_allow_html=True,
     )
@@ -75,7 +68,12 @@ left_info_col.markdown(
 right_info_col.markdown(
         """
         ### Funding
-        - Cambridge Centre for Data-Driven Discovery and Accelerate Programme for Scientific Discovery
+        Cambridge Centre for Data-Driven Discovery (C2D3) and Accelerate Programme for Scientific Discovery, 
+        National Institutes of Health (R35 GM122547 to AEC),
+        Swedish Research Council (grants 2020-03731 and 2020-01865), 
+        FORMAS (grant 2022-00940), 
+        Swedish Cancer Foundation (22 2412 Pj 03 H), 
+        Horizon Europe grant agreement #101057014 (PARC) and #101057442 (REMEDI4ALL).
          """
     )
 
