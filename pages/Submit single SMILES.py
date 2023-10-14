@@ -56,6 +56,17 @@ def main():
         st.write("Threshold for Cardiotoxicity:", np.round(0.641338, 2))
         
         # Visualization of substructures
+        # Convert the substructure strings into Mol objects
+        DICT_rank_substructures_ppv1 = [ "C=CCCC(=O)", "CCOCCC[NH+](C)C", "C(CCCCCC(O)CCC)C(=O)", "CC[NH+](CC(=O)[O-])CCNC", "CCC[NH+](C)C(C(=O)[O-])", "CC(C[N+](C)(C))OC"]
+        
+        DICT_Concern_substructures = ['CCOCCC[NH+](C)C', 'CN(C)c1ccccn1']
+        
+        DICT_Concern_mols = [Chem.MolFromSmiles(smiles) for smiles in DICT_Concern_substructures]
+        
+        DICT_rank_mols = [Chem.MolFromSmiles(smiles) for smiles in DICT_rank_substructures_ppv1]
+        
+        
+        
         mol = Chem.MolFromSmiles(df['Standardized_SMILES'].values[0])
         dpi = 300
         molSize = (300, 300)
