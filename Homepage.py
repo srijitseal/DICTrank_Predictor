@@ -21,10 +21,10 @@ st.sidebar.success("")
 
 st.markdown(
 """
-    DICT Predictor is an open-source app framework built specifically for
+    DICTrank Predictor is an open-source app framework built specifically for
     human drug-induced cardiotoxicity (DICT)  
 
-    DILI Predictor employs physicochemical parameters as features.
+    DICTrank Predictor employs physicochemical parameters as features.
     
     Select from the sidebar to predict DILI for a single molecule
     For bulk jobs, or local use: see (https://broad.io/DICTrank_Predictor)
