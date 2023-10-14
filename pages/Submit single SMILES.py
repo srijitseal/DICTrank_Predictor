@@ -20,7 +20,7 @@ def main():
     if st.button('Predict DICTrank'):
     
         # Load data_columns from the .pkl file
-        with open('./features/data_columns.pkl', 'rb') as file:
+        with open('features/data_columns.pkl', 'rb') as file:
             data_columns = pickle.load(file)
         
         # Create a DataFrame with a single column "SMILES"
@@ -44,7 +44,7 @@ def main():
         X[np.isinf(X)] = 0
         
         # Load the classifier model
-        classifier = pickle.load(open("./model/FINAL_Physicochemical_model.sav", 'rb'))
+        classifier = pickle.load(open("model/FINAL_Physicochemical_model.sav", 'rb'))
         
         # Predict DICTrank
         prob_test = classifier.predict_proba(X)[:, 1]
