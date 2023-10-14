@@ -60,7 +60,7 @@ left_info_col.markdown(
         
         ##### Srijit Seal 
         - Email:  <seal@broadinstitute.org>
-        - GitHub: https://github.com/srijitseal
+        - GitHub: https://github.com/srijitseal/DICTrank
         """,
         unsafe_allow_html=True,
     )
