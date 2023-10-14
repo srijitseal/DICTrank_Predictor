@@ -90,21 +90,23 @@ def main():
                 return main_img, sub_img
             return None, None
         
-        # Display DICTrank substructures
-        col1.subheader("Structural Alerts for DICTrank 1")
-        for sub_mol in DICT_rank_mols:
-            main_img, sub_img = check_and_display_substructure(sub_mol)
-            if main_img is not None:
-                col1.image(main_img)
-                col1.image(sub_img)
+        # Display DICTrank substructures if alerts are present
+        if any(mol.HasSubstructMatch(sub_mol) for sub_mol in DICT_rank_mols):
+            col1.subheader("Structural Alerts for DICTrank 1")
+            for sub_mol in DICT_rank_mols:
+                main_img, sub_img = check_and_display_substructure(sub_mol)
+                if main_img is not None:
+                    col1.image(main_img)
+                    col1.image(sub_img)
         
-        # Display DICT Most-concern category substructures
-        col2.subheader("Structural Alerts for DICT Most-concern category")
-        for sub_mol in DICT_Concern_mols:
-            main_img, sub_img = check_and_display_substructure(sub_mol)
-            if main_img is not None:
-                col2.image(main_img)
-                col2.image(sub_img)
+        # Display DICT Most-concern category substructures if alerts are present
+        if any(mol.HasSubstructMatch(sub_mol) for sub_mol in DICT_Concern_mols):
+            col2.subheader("Structural Alerts for DICT Most-concern category")
+            for sub_mol in DICT_Concern_mols:
+                main_img, sub_img = check_and_display_substructure(sub_mol)
+                if main_img is not None:
+                    col2.image(main_img)
+                    col2.image(sub_img)
 
 if __name__ == '__main__': 
     main()   
