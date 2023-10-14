@@ -6,7 +6,7 @@ import numpy as np
 from rdkit import Chem
 from mordred import Calculator, descriptors
 import pickle
-from ..scripts.standardise_smiles_local_implementation import standardize_jumpcp
+#from ..scripts.standardise_smiles_local_implementation import standardize_jumpcp
 from rdkit.Chem import Draw
 
 # Create Streamlit app
