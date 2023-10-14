@@ -51,7 +51,7 @@ def main():
         df["Probability"] = prob_test
         df["Prediction"] = (prob_test >= 0.641338).astype(int)
         
-        if y_pred[0] == 1:
+        if df["Prediction"][0] == 1:
             cardiotoxicity_status = "This compound is predicted as **_cardiotoxic_**."
         else:
             cardiotoxicity_status = "This compound is predicted as **_not cardiotoxic_**."
