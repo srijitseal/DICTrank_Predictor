@@ -43,7 +43,7 @@ left_col.markdown(
         """
         ### Usage
         On the left pane is the main menu for navigating to 
-        the following pages in the PK Predictor application:
+        the following pages in the DICTrank Predictor application:
         - **Home Page:** You are here!
         - **Submit single SMILES:** You can enter the smiles of the query compound here to obtain a detailed analysis of the predicted DICTrank and detected structural alerts.
         """
