@@ -119,7 +119,7 @@ def main():
                             col2.image(main_img)
                             col2.image(sub_img)
 
-                st.success("Unsuccessful")
+                st.success("Successful")
                 
             except: 
                 if (smiles==' '):
