@@ -118,14 +118,17 @@ def main():
                         if main_img is not None:
                             col2.image(main_img)
                             col2.image(sub_img)
-        except: 
-            if (smiles==' '):
-                st.write(f"Empty SMILES : Unsuccessful!")
-                        
-            else:
-                st.write(f"{smiles} Unsuccessful! Check SMILES")
-                st.success("Unsuccessful")
 
+                st.success("Unsuccessful")
+                
+            except: 
+                if (smiles==' '):
+                    st.write(f"Empty SMILES : Unsuccessful!")
+                else:
+                    st.write(f"{smiles} Unsuccessful! Check SMILES")
+                
+                st.success("Unsuccessful")
+                    
 if __name__ == '__main__': 
     main()   
 
