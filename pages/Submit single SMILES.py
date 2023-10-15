@@ -51,6 +51,13 @@ def main():
         df["Probability"] = prob_test
         df["Prediction"] = (prob_test >= 0.641338).astype(int)
         
+        dpi = 300
+        molSize = (300, 300)
+        
+        mol = Chem.MolFromSmiles(df['Standardized_SMILES'].values[0])
+        mol_img =  Draw.MolToImage(mol, size=molSize, dpi=dpi)
+        st.image(mol_img)
+        
         if df["Prediction"][0] == 1:
             cardiotoxicity_status = "This compound is predicted as **_cardiotoxic_**."
         else:
@@ -74,12 +81,7 @@ def main():
         DICT_rank_mols = [Chem.MolFromSmiles(smiles) for smiles in DICT_rank_substructures_ppv1]
         
         
-        dpi = 300
-        molSize = (300, 300)
         
-        mol = Chem.MolFromSmiles(df['Standardized_SMILES'].values[0])
-        mol_img =  Draw.MolToImage(mol, size=molSize, dpi=dpi)
-        st.image(mol_img)
         
         # Create a Streamlit column for the molecule image
         col1, col2 = st.columns(2)
