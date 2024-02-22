@@ -30,7 +30,7 @@ st.markdown(
     For bulk jobs, or local use: see [Documentation](https://broad.io/DICTrank_Predictor)
     
     ### Want to learn more?
-    - Check out our paper at [bioarxiv](https://streamlit.io)
+    - Check out our paper at https://pubs.acs.org/doi/10.1021/acs.jcim.3c01834
     """
 )
 st.markdown("---")
